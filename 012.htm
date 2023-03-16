@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Page-Enter" content="Alpha(opacity=100)">
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0)">
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <link rel="stylesheet" media="screen" href="assets/css/slick.css" />
+   <link rel="stylesheet" href="assets/css/animate.css" />
+   <link rel="stylesheet" href="assets/css/style.css" />
+   <link rel="stylesheet" href="assets/css/CNSstyle.css" />
+   <script src="assets/js/lib/jquery-3.1.1.min.js"></script>
+   <script src="assets/js/lib/jquery-ui.min.js"></script>
+   <script src="assets/js/main.js"></script>
+   <script src="assets/js/ScreenDictionary.js"></script> 
+    <title>Card Language</title>
+</head>
+<body>
+    <div id="frame" class="all">
+    <div class="nav">
+      <div class="left-items">
+        <img src="assets/images/logo-light.svg" alt="" />
+      </div>
+    </div>
+    <div class="main-items">
+      <!-- <div class="main-top animate__animated animate__fadeInDown">
+        <p id="PageTitle1" class="font-37">Please Wait!</p>
+      </div>
+       <div class="main-body main-vertical-flex">
+          <img src="assets/images/LoadingArrows.gif" class="loading" />
+        </div> -->
+    </div>
+    <div class="bottom"></div>
+        <p id="ATMCtrl" style="visibility:hidden">ATM Control</p>
+		 <script src="assets/js/WEBAPI/GetTerminalDetails.js"></script>
+        <script type="text/javascript">
+            var Pagename = "012";
+            SetValue("StartMode", "CARD");
+            SetValue("PageName", "Pleasewait");
+            SetValue("TimoutPageName", "Language");//used for timeout
+            GetScreenResolution();
+            LoadScreenCSS();            
+            function OnContentStart() { }
+            GetTerminalDetails();
+            window.setTimeout(function () {
+                 
+                NavigateNextPage("Language.htm", 100);
+              // NavigateNextPage("SC1.htm", 100);
+            }, 100);
+        </script>
+        
+    </div>
+	<script src="assets/js/lib/jquery.newkeyboard.min.js"></script>
+    <script src="assets/js/lib/jquery.overlayScrollbars.js"></script>
+    <script src="assets/js/lib/slick.min.js"></script>
+    <script src="assets/js/lib/stats.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>
